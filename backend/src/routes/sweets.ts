@@ -1,0 +1,13 @@
+import { Router } from 'express';
+import * as ctrl from '../controllers/sweetsController';
+import { authMiddleware, requireAdmin } from '../middleware/auth';
+const router = Router();
+router.use(authMiddleware);
+router.post('/', ctrl.createSweet);
+router.get('/', ctrl.listSweets);
+router.get('/search', ctrl.searchSweets);
+router.put('/:id', ctrl.updateSweet);
+router.delete('/:id', requireAdmin, ctrl.deleteSweet);
+router.post('/:id/purchase', ctrl.purchaseSweet);
+router.post('/:id/restock', requireAdmin, ctrl.restockSweet);
+export default router;
