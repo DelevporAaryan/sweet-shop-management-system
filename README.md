@@ -78,13 +78,15 @@ copy .env.example .env   # Windows CMD
 cp .env.example .env     # Git Bash
 
 npm run dev
+
 ## Screenshots
 
 ### Login Page
-![Login Page](./screenshots/login.png)
+![Login Page](screenshots/login.png)
 
 ### Dashboard with Seeded Data
-![Dashboard](./screenshots/dashboard.png)
+![Dashboard](screenshots/dashboard.png)
 
 ### Admin Panel
-![Admin Panel](./screenshots/admin.png)
+![Admin Panel](screenshots/admin.png)
+
